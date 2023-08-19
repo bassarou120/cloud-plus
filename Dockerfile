@@ -33,6 +33,7 @@ RUN unzip vendor.zip
 #RUN composer  install
 #RUN composer update --ignore-platform-reqs
 
+WORKDIR /var/www/html/
 
 ARG DB_CONNECTION=${DB_CONNECTION}
 ARG DB_HOST=${DB_HOST}
