@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     locales \
     zip \
     unzip \
-    php-zip
+
 
 
 WORKDIR /var/www/html/core
