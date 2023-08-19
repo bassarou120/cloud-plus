@@ -1,4 +1,4 @@
-<?php
+A<?php
 
 use Illuminate\Support\Facades\Route;
 
@@ -9,7 +9,7 @@ Route::get('/clear', function(){
 Route::controller('CronController')->prefix('cron')->group(function () {
     Route::get('/', 'cron')->name('cron');
     Route::get('/all', 'all')->name('cron.all');
-});  
+});
 
 // User Support Ticket
 Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(function () {
@@ -20,7 +20,7 @@ Route::controller('TicketController')->prefix('ticket')->name('ticket.')->group(
     Route::post('reply/{ticket}', 'replyTicket')->name('reply');
     Route::post('close/{ticket}', 'closeTicket')->name('close');
     Route::get('download/{ticket}', 'ticketDownload')->name('download');
-}); 
+});
 
 Route::get('app/deposit/confirm/{hash}', 'Gateway\PaymentController@appDepositConfirm')->name('deposit.app.confirm');
 
@@ -35,9 +35,9 @@ Route::controller('CartController')->prefix('shopping/cart')->name('shopping.')-
     Route::post('config/domain/update', 'configDomainUpdate')->name('cart.config.domain.update');
     Route::get('config/service/{cartId}', 'configService')->name('cart.config.service');
     Route::post('config/service/update', 'configServiceUpdate')->name('cart.config.service.update');
-    Route::post('coupon', 'coupon')->name('cart.coupon'); 
-    Route::post('coupon/remove', 'couponRemove')->name('cart.coupon.remove');  
-    Route::post('domain/renew', 'domainRenew')->name('cart.domain.renew')->middleware('auth'); 
+    Route::post('coupon', 'coupon')->name('cart.coupon');
+    Route::post('coupon/remove', 'couponRemove')->name('cart.coupon.remove');
+    Route::post('domain/renew', 'domainRenew')->name('cart.domain.renew')->middleware('auth');
 });
 
 Route::controller('SiteController')->group(function () {
@@ -48,7 +48,7 @@ Route::controller('SiteController')->group(function () {
     Route::get('/register/domain', 'registerDomain')->name('register.domain');
     Route::get('/search/domain', 'searchDomain')->name('search.domain');
 
-    Route::get('/contact', 'contact')->name('contact'); 
+    Route::get('/contact', 'contact')->name('contact');
     Route::post('/contact', 'contactSubmit');
     Route::get('/change/{lang?}', 'changeLanguage')->name('lang');
 
