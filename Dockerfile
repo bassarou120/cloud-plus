@@ -29,7 +29,8 @@ RUN chmod -R 777 /var/www/html/core/storage/logs/
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 
-RUN composer update --ignore-platform-reqs
+RUN composer  install
+#RUN composer update --ignore-platform-reqs
 
 
 ARG DB_CONNECTION=${DB_CONNECTION}
