@@ -14,8 +14,12 @@ RUN apt-get update && apt-get install -y \
 
 RUN docker-php-ext-install bcmath
 
+
+
 RUN docker-php-ext-install gd
 RUN docker-php-ext-install pdo_mysql
+
+RUN apt-get install bash-completion -y
 
 
 WORKDIR /var/www/html/core
