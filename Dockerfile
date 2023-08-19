@@ -20,6 +20,11 @@ RUN docker-php-ext-install pdo_mysql
 WORKDIR /var/www/html/core
 
 RUN chmod -R 755 /var/www/html/core/storage
+RUN chmod -R 755 /var/www/html/core/bootstrap/cache/
+RUN chmod -R 755 /var/www/html/core/storage/app/
+RUN chmod -R 755 /var/www/html/core/storage/logs/
+
+
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
