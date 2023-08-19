@@ -30,3 +30,11 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 
 RUN composer update --ignore-platform-reqs
+
+
+ARG DB_CONNECTION=${DB_CONNECTION}
+ARG DB_HOST=${DB_HOST}
+ARG DB_PORT=${DB_PORT}
+ARG DB_DATABASE=${DB_DATABASE}
+ARG DB_USERNAME=${DB_USERNAME}
+ARG DB_PASSWORD=${DB_PASSWORD}
