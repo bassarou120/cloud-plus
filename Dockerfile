@@ -29,7 +29,7 @@ RUN chmod -R 777 /var/www/html/core/storage/logs/
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-
+RUN unzip vendor.zip
 #RUN composer  install
 #RUN composer update --ignore-platform-reqs
 
